@@ -6,19 +6,16 @@
 mkdir D-ITG
 cd D-ITG
 # get itg source for linux
-wget http://traffic.comics.unina.it/software/ITG/codice/D-ITG-2.8.0-rc1.tgz
+wget http://www.grid.unina.it/software/ITG/codice/D-ITG-2.8.1-r1023-src.zip
 # untar
-tar xf D-ITG-2.8.0-rc1.tgz
+unzip D-ITG-2.8.1-r1023-src.zip
 # cd
-cd D-ITG-2.8.0-rc1
+cd D-ITG-2.8.1-r1023
 # next lines won't work since patch cannot be aplied anymore!
 # patch was for another revision of the version control and is out of sync now.
+# For older D-ITG Versions
 # FOR THIS TO WORK, PLACE PATCH FILES IN ~/D-ITG-PATCH
 #cp ~/D-ITG-PATCH/* .
 #patch -p1 --dry-run < ITGDec.patch
-#cd src
-#make
-echo
-echo 'apply patch by hand now!'
-echo 'it is around line 545, not 535 or so.'
-echo 'then cd src/ and make...'
+cd src
+make
